@@ -16,7 +16,10 @@
   :root{
     --dark-black: #2A2E31;
     --gray: #91989F;
+    --white: #fff;
+    --blue-sombra: #1CD6CE;
   }
+
   *{
     box-sizing: border-box;
     margin: 0;
@@ -24,6 +27,7 @@
   }
   body{
     font-size: 64.5%;
+font-family: 'Fira Sans Condensed', sans-serif;
     font-family: 'DynaPuff', cursive;
     background-color: #F7F9FA;
   }
