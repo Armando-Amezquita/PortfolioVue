@@ -48,7 +48,9 @@
         background-color: var(--dark-black);
         padding: 3rem 0;
         border-top-left-radius: 10rem;
+        border-bottom-right-radius: 10rem;
         box-shadow: -5rem -1rem 2rem var(--gray);
+        margin-bottom: 4rem;
     }
     .knowledge__container{
         width: 90%;
@@ -93,8 +95,6 @@
         flex-wrap: wrap;
         justify-content: space-between;
         width: 100%;
-
-
     }
     img{
         min-width: 7rem;

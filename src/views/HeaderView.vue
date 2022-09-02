@@ -4,15 +4,14 @@
         <div class="header_container">
             <h1 class="title">I'm a Full-Stack Developer</h1>
             <p class="header_description">Mi nombre es <span> Armando Amezquita</span>, y soy desarrollador front-end, desarrollador back-end y desarrollador de bases de datos.</p>
-            <p>
-                <button>Contáctame</button>
-            </p>
+            <ButtonContact />
         </div>
     </header>
 </template>
 
 <script setup>
     import NavBar from '../components/NavBar.vue';
+    import ButtonContact from '@/components/ButtonOne.vue';
     
 </script>
 
@@ -53,18 +52,7 @@
         color: #1CD6CE;
         text-decoration: underline;
     }
-    button{
-        margin-top: 1rem;
-        font-size: 1.5rem;
-        width: 10rem;
-        height: 3rem;
-        border-radius: 1rem;
-        cursor: pointer;
-        background-color: transparent;
-        box-shadow: 0 0 5px #1CD6CE, 0 0 15px #1CD6CE;
-        color: var(--white);
-        border: 1.5px solid var(--white);
-    }
+    
 
     /* @media screen and (min-width: 400px) {
         .title{

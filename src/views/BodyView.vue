@@ -2,14 +2,16 @@
     <main class="main">
         <MainSection />
         <MainKnowledge />
-        
-
+        <TimeLine />
+        <ContactDescription />
     </main>
 </template>
 
 <script setup>
     import MainSection from '@/components/MainSection.vue';
     import MainKnowledge from '@/components/MainKnowledge.vue';
+    import TimeLine from '@/components/TimeLine.vue';
+    import ContactDescription from '@/components/ContactDescription.vue';
 </script>
 
 <style scoped>
@@ -69,8 +71,6 @@
         flex-wrap: wrap;
         justify-content: space-between;
         width: 100%;
-
-
     }
     img{
         min-width: 7rem;
@@ -78,4 +78,5 @@
         height: 6rem;
         margin-right: 1rem;
     }
+    
 </style>
