@@ -3,7 +3,8 @@
         <NavBar class="navbar" />
         <div class="header_container">
             <h1 class="title">I'm a Full-Stack Developer</h1>
-            <p class="header_description">Mi nombre es <span> Armando Amezquita</span>, y soy desarrollador front-end, desarrollador back-end y desarrollador de bases de datos.</p>
+            <p class="header_description">Mi nombre es <span> Armando Amezquita</span>, y soy desarrollador front-end, desarrollador back-end y desarrollador de bases de datos.
+            </p>
             <ButtonContact />
         </div>
     </header>

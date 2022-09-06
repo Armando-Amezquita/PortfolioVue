@@ -2,7 +2,9 @@
     <main class="main">
         <MainSection />
         <MainKnowledge />
-        <TimeLine />
+        <TimeLines 
+            :projects = "projects"
+        />
         <ContactDescription />
     </main>
 </template>
@@ -10,8 +12,35 @@
 <script setup>
     import MainSection from '@/components/MainSection.vue';
     import MainKnowledge from '@/components/MainKnowledge.vue';
-    import TimeLine from '@/components/TimeLine.vue';
+    import TimeLines from '@/views/TimeLinesView.vue';
     import ContactDescription from '@/components/ContactDescription.vue';
+
+    const projects = [
+        {
+            id: 1,
+            title: "Developer",
+            description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero nobis natus ipsum repellat laborum dignissimos, recusandae laboriosam repellendus voluptas facere adipisci. Saepe, ducimus? Eligendi facere dolores sit? Similique, accusamus corporis!",
+            image: "escritorio.jpg",
+            tecnologies: "react, vue, etc"
+        },
+        {
+            id: 2,
+            title: "Videogames App",
+            description: `Desarrollo de una SPA(Single Page Application), la cual consume datos de una API(rawg.io), generando una nueva API-Rest-Full con nuevas y mejores funcionalidades, como lo son: filtros de busqueda de videojuegos, ordenamientos de estos, formulario para insertar un nuevo videojuego, etc.
+            Se utilizaron las siguientes tecnologias:  
+            `,
+            image: "escritorio.jpg",
+            tecnologies: "react, vue, etc"
+        },
+        {
+            id: 3,
+            title: "Developer",
+            description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero nobis natus ipsum repellat laborum dignissimos, recusandae laboriosam repellendus voluptas facere adipisci. Saepe, ducimus? Eligendi facere dolores sit? Similique, accusamus corporis!",
+            image: "escritorio.jpg",
+            tecnologies: "react, vue, etc"
+        },
+    ]
+
 </script>
 
 <style scoped>

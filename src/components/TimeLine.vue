@@ -1,24 +1,46 @@
 <template>
-<div class="timeline__container">
-        <section class="portfolio">
-            <h2 class="portfolio__title">Mis proyectos recientes &darr;</h2>
-            <div class="portfolio__container">
-                <div class="portfolio__container-information">
-                    <h3>Red Social</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero nobis natus ipsum repellat laborum dignissimos, recusandae laboriosam repellendus voluptas facere adipisci. Saepe, ducimus? Eligendi facere dolores sit? Similique, accusamus corporis!</p>
+    <div class="timeline__container">
+            <section class="portfolio">
+                <div class="portfolio__container">
+                    <div class="portfolio__container-information">
+                        <h3>{{ title }}</h3>
+                        <p>{{ description }}</p>
+                        <p>{{ tecnologies }}</p>
+                        <p>{{ image }}</p>
+                    </div>
+                    <picture class="portfolio__container-image">
+                        <img :src="require(`@/assets/${image}`)" :alt="`${title}`">
+                    </picture>
                 </div>
-                <picture class="portfolio__container-image">
-                    <img src="@/assets/escritorio.jpg" alt="">
-                </picture>
-            </div>
-            
-        </section>
-        <hr />
-
-</div>
+                
+            </section>
+            <hr />
+    </div>
 </template>
 
 <script setup>
+    import { toRefs, defineProps } from 'vue';
+    const props = defineProps({
+        id: {
+            type: Number 
+        },
+        title: {
+            type: String 
+        },
+        description: {
+            type: String 
+        },
+        image: {
+            type: String 
+        },
+        tecnologies:{
+            type: String
+        }
+    });
+
+    console.log(props.image)
+
+    const { title,  description, tecnologies, image } = toRefs(props);
 
 </script>
 
@@ -33,10 +55,7 @@
         align-items: center;
         margin-bottom: 2rem;
     }
-    .portfolio__title{
-        margin-bottom: 3rem;
-        font-size: 2rem;
-    }
+    
     .portfolio__container{
         display: grid;
         /* grid-template-columns: repeat(2, 1fr); */
@@ -47,6 +66,7 @@
         display: flex;
         flex-direction: column;
         justify-content: flex-start;
+        align-items: flex-start;
         padding: 2rem;
     }
     picture{
@@ -78,6 +98,6 @@
     }
     p{
         font-size: 1.2rem;
+        margin-bottom: 2rem;
     }
-    
 </style>
