@@ -7,13 +7,13 @@
         </p>
         <ul class="footer__section-rigth">
             <i v-for="social in socialNetworks" :key="social.id">
-                <a href="">
+                <a :href="social.url" target="_blank">      
+                <!-- <router-link to="https://www.linkedin.com/in/armando-amezquita-molina/" target="_blank">       -->
                     <font-awesome-icon class="icons fa-solid fa-money-check-dollar fa-flip" :icon="social.image" />
                 </a>
-                    <!-- <img v-bind:src="`@/assets/${social.image}`" :alt="social.image.alt">
-                    <img v-bind:src="`@/assets/${i}`" :alt="social.image.alt"> -->
             </i>
         </ul>
+        <!-- <a href="mailto:rafa@gmail.com?Subject=Interesado%20en%20el%20curso">Contactar por correo</a> -->
     </footer>
 </template>
 
@@ -24,21 +24,18 @@
             id: 1,
             title: "LinkedIn",
             image: `fa-brands fa-linkedin`,
+            url: "https://www.linkedin.com/in/armando-amezquita-molina/"
         },
         {
             id: 2,
             title: "github",
-            image: "fa-brands fa-github"
+            image: "fa-brands fa-github",
+            url: "https://github.com/Armando-Amezquita"
         },
         {
             id: 3,
             title: "gmail",
             image: "fa-regular fa-envelope"
-        },
-        {
-            id: 4,
-            title: "vue",
-            image: "fa-brands fa-vuejs"
         }
     ]
 </script>

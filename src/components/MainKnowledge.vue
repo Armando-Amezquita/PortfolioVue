@@ -43,7 +43,7 @@
 <script setup>
     import AOS from 'aos';
     AOS.init({
-        duration: 1000
+        duration: 1500
     });
 </script>
 
