@@ -26,6 +26,9 @@
     margin: 0;
     padding: 0;
   }
+  html{
+    overflow-x: hidden;
+  }
   body{
     font-size: 64.5%;
 font-family: 'Fira Sans Condensed', sans-serif;

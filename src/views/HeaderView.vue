@@ -7,7 +7,6 @@
             </p>
             <ButtonContact class="button"/>
             <Bubbles />
-
         </div>
         
     </header>
@@ -33,6 +32,7 @@
         border-bottom-right-radius: 10rem;
         box-shadow: 1rem 1rem 2rem var(--gray);
         margin-bottom: 1rem;
+        overflow: hidden;
     }
     .navbar{
         position: absolute;
@@ -53,6 +53,7 @@
         font-size: 1.5rem;
         color: var(--gray);
         margin-bottom: 2rem;
+        overflow: hidden;
     }
     span{
         color: #1CD6CE;
