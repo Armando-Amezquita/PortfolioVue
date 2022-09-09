@@ -1,10 +1,10 @@
 <template>
     <nav>
         <ul>
-            <li><a href="default.asp">Home</a></li>
-            <li><a href="news.asp">News</a></li>
-            <li><a href="contact.asp">Contact</a></li>
-            <li><a href="about.asp">About</a></li>
+            <li><router-link to="/"> Inicio </router-link></li>
+            <li><router-link to="/about"> Sobre mi </router-link></li>
+            <li><router-link to="/contact"> Contacto </router-link></li>
+            <li><router-link to="/hola"> Hola </router-link></li>
         </ul>
     </nav>
 </template>

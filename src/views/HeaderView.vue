@@ -3,16 +3,20 @@
         <NavBar class="navbar" />
         <div class="header_container">
             <h1 class="title">I'm a Full-Stack Developer</h1>
-            <p class="header_description">Mi nombre es <span> Armando Amezquita</span>, y soy desarrollador front-end, desarrollador back-end y desarrollador de bases de datos.
+            <p class="header_description">Mi nombre es <span> Armando Amezquita</span>, y soy desarrollador front-end, desarrollador back-end y desarrollador de bases de datos y servidores.
             </p>
-            <ButtonContact />
+            <ButtonContact class="button"/>
+            <Bubbles />
+
         </div>
+        
     </header>
 </template>
 
 <script setup>
     import NavBar from '../components/NavBar.vue';
     import ButtonContact from '@/components/ButtonOne.vue';
+    import Bubbles from '@/components/BubblesSection.vue';
     
 </script>
 
@@ -48,16 +52,16 @@
     .header_description{
         font-size: 1.5rem;
         color: var(--gray);
+        margin-bottom: 2rem;
     }
     span{
         color: #1CD6CE;
         text-decoration: underline;
     }
-    
-
     /* @media screen and (min-width: 400px) {
         .title{
             font-size: 5rem;
         }
     } */
+
 </style>

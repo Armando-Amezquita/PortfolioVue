@@ -9,10 +9,16 @@ import { faEnvelope } from '@fortawesome/free-regular-svg-icons';
 //<!-- <fa class="youtube" icon="fa-solid faLinkedin" /> -->
 
 import { faGithub, faLinkedin, faVuejs } from '@fortawesome/free-brands-svg-icons';
-import App from './App.vue'
+import App from './App.vue';
+import router from './router';
+
 
 library.add(faGithub, faLinkedin, faVuejs, faEnvelope );
 
-createApp(App)
-    .component('font-awesome-icon', FontAwesomeIcon)
-    .mount('#app')
+const app = createApp(App)
+    .component('font-awesome-icon', FontAwesomeIcon);
+    
+
+app.use(router);
+
+app.mount('#app');

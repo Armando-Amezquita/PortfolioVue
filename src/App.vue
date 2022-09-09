@@ -1,15 +1,16 @@
 <template>
-  <Home />
+  <router-view />
+  <!-- <Home /> -->
 </template>
 
 <script>
-  import Home from "./views/HomeView.vue";
+  // import Home from "./views/HomeView.vue";
   
-  export default {
-    components: {
-      Home
-    }
-  }
+  // export default {
+  //   components: {
+  //     Home
+  //   }
+  // }
 </script>
 
 <style>

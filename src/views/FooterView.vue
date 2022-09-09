@@ -58,7 +58,7 @@
         text-align: center;
     }
     .footer__section-left{
-        color: var(--white);
+        color: var(--gray);
     }
     .footer__section-rigth{
         display: flex;
@@ -73,7 +73,7 @@
         color: aliceblue;
         font-size: 3rem;
         animation-duration: 3s;
-        box-shadow: 0 0 5px #1CD6CE, 0 0 15px #1CD6CE, 0 0 30px #1CD6CE;
-        border-radius: 50%;
+        /* box-shadow: 0 0 5px #1CD6CE, 0 0 15px #1CD6CE, 0 0 30px #1CD6CE;
+        border-radius: 50%; */
     }
 </style>

@@ -22,7 +22,8 @@
     .contact__button{
         background-color: var(--dark-black);
         padding: 0;
-        width: 15rem;
+        text-align: center;
+        padding: .5rem 1rem;
     }
     .contact h2{
         margin: 2rem 0;

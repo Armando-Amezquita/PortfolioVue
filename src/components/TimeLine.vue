@@ -1,12 +1,12 @@
 <template>
-    <div class="timeline__container">
+    <div class="timeline__container"  data-aos="fade-up" >
             <section class="portfolio">
                 <div class="portfolio__container">
                     <div class="portfolio__container-information">
                         <h3>{{ title }}</h3>
                         <p>{{ description }}</p>
+                        <h3>Tecnologias utilizadas</h3>
                         <p>{{ tecnologies }}</p>
-                        <p>{{ image }}</p>
                     </div>
                     <picture class="portfolio__container-image">
                         <img :src="require(`@/assets/${image}`)" :alt="`${title}`">
@@ -17,9 +17,13 @@
             <hr />
     </div>
 </template>
-
-<script setup>
+<script setup >
     import { toRefs, defineProps } from 'vue';
+    import AOS from 'aos';
+    AOS.init({
+        duration: 1000
+    });
+
     const props = defineProps({
         id: {
             type: Number 
@@ -37,9 +41,6 @@
             type: String
         }
     });
-
-    console.log(props.image)
-
     const { title,  description, tecnologies, image } = toRefs(props);
 
 </script>
@@ -75,8 +76,10 @@
         align-items: center;
         width: 100%;
         height: auto;
-        background-color: #cecece;
+        background-color: #F7F9FA;
         border-radius: 1rem;
+        box-shadow: 3px 13px 35px -3px rgba(0,0,0,0.52);
+        margin-top: 2rem;
     }
         
         /* background-image:  url('../assets/escritorio.jpg');
@@ -87,8 +90,8 @@
         /* box-shadow: 0 0 10px #21f3d0, 0 0 15px #21f3d0; */
     
     .portfolio__container-image > img{
-        width: 90%;
-        height: 90%;
+        width: 95%;
+        height: 95%;
         border-radius: .5rem;
     }
     h3 {
