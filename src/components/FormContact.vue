@@ -1,25 +1,4 @@
-<template>
-    <form action="" @submit.prevent="nombreAcction(obj)">
-        <input type="text" placeholder="name" v-model="username.name">
-        <input type="text" placeholder="lastname" v-model="username.lastname">
-        <input type="text" placeholder="email" v-model="username.email">
-        <button type="submit">Enviar</button>
-    </form>
-    {{username}}
-</template>
-
 <script >
-    // import { toRefs, defineProps } from 'vue';
-
-    // const props = defineProps({
-    //     username: {
-    //         name: 'Armando',
-    //         lastname: 'Amezquita',
-    //         email: 'a@gmail.com'
-    //     }
-    // })
-
-    // const { username } = toRefs(props);
     export default {
         data(){
             return {
@@ -32,11 +11,85 @@
         }
     }
 </script>
+<template>
+    <form action="" @submit.prevent="nombreAcction(obj)">
+        <input class="name" type="text" placeholder="name" v-model="username.name">
+        <input class="lastname" type="text" placeholder="lastname" v-model="username.lastname">
+        <input class="email" type="text" placeholder="email" v-model="username.email">
+        <textarea class="textarea" name="" id="" cols="30" rows="10"> sugerencias</textarea>
+        <button class="send" type="submit">Enviar</button>
+    </form>
+    <!-- <p>
+        {{username}}
+    </p> -->
+</template>
 
 <style scoped>
     form{
+        display: grid;
+        grid-template-rows: repeat(3, auto);
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 1rem;
+        grid-template-areas:
+        "area1 area1"
+        "area2 area2"
+        "area3 area3"
+        "area4 area4";
+        padding: 1rem;
+        margin: 2rem 0 0 0;
         width: 30rem;
-        height: 30rem;
-        background: darkcyan;
+        min-height: 10rem;
+        height: auto;
+    }
+    .name, .lastname, .email, .textarea {
+        padding: 1rem;
+        border-radius: .5rem;
+    }
+    .email{
+        grid-area: area2;
+    }
+    .textarea{
+        grid-area: area3;
+    }
+    button{
+        grid-area: area4;
+        font-size: 1.5rem;
+        border-radius: .5rem;
+        width: 80%;
+        margin: 0 auto;
+    }
+    input, textarea{
+        border-radius: .5rem;
+        border: 1px solid white;
+        background-color: transparent;
+        box-shadow: 0 0 5px #1CD6CE, 0 0 15px #1CD6CE;
+        color: aliceblue;
+        font-size: 1rem;
+    }
+    ::placeholder{
+        color: var(--gray);
+    }
+    button{
+        position: relative;
+        padding: .5rem 1rem;
+        font-size: 1.5rem;
+        border-radius: .5rem;
+        cursor: pointer;
+        background-color: transparent;
+        box-shadow: 0 0 5px #1CD6CE, 0 0 15px #1CD6CE, 0 0 20px #1CD6CE;
+        color: var(--white);
+        border: 1.5px solid var(--white);
+        transition: 1.5s;
+    }
+    button:hover{
+        background-color: var(--white);
+        border: 1.5px solid var(--dark-black);
+        color: var(--dark-black);
+        border-radius: 1rem;
+        font-size: 1.7rem;
+    }
+    p{
+        color: aliceblue;
+        font-size: 1.5rem;
     }
 </style>

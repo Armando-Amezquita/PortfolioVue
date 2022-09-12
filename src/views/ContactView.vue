@@ -1,5 +1,6 @@
 <script setup> 
     import NavBar from '@/components/NavBar.vue';
+    import FormContact from '@/components/FormContact.vue';
 </script>
 
 <template>
@@ -8,13 +9,14 @@
     </header>
     <body>
         <h2>Hola.. Quieres colaborar conmigo, dejame tus datos si prefieres que te contacte</h2>
-        <div>
+        <!-- <div>
             <input type="text" placeholder="name" name="name">
             <input type="text" placeholder="email">
             <input type="text" placeholder="interes">
-            <input type="text" placeholder="name">
+            <input type="text" placeholder="name"> -->
             <!-- <button type="submit"></button> -->
-        </div>
+        <!-- </div> -->
+        <FormContact />
     </body>
 </template>
 
@@ -35,6 +37,7 @@
         flex-direction: column;
         min-height: 90vh;    
         width: 100%;
+        padding: 2rem 0;
         background-color: var(--dark-black);
     }
     div{
@@ -60,6 +63,7 @@
         padding-left: 1rem;
     }
     h2{
+        margin-bottom: 2rem;
         font-size: 2rem;
         width: 60rem;
         text-align: center;

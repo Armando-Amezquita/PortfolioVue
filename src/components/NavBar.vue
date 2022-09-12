@@ -2,9 +2,7 @@
     <nav>
         <ul>
             <li><router-link to="/"> Inicio </router-link></li>
-            <li><router-link to="/about"> Sobre mi </router-link></li>
             <li><router-link to="/contact"> Contacto </router-link></li>
-            <li><router-link to="/hola"> Hola </router-link></li>
         </ul>
     </nav>
 </template>
@@ -22,12 +20,13 @@
 
     ul{
         display: flex;
-        justify-content: space-between;
+        justify-content: right;
         align-items: center;
     }
 
     li{
         list-style: none;
+        margin-left: 4rem;
     }
     a{
         font-size: 1.3rem;
