@@ -44,7 +44,7 @@
         color: var(--black);
     }
     .main_section-left hr{
-        width: 10rem;
+        width: 18%;
         margin-bottom: 2rem;
     }
     .main_section-left p{

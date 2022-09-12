@@ -2,12 +2,12 @@
     <section class="contact">
             <h2>Estas interesad@ en colaborar conmigo</h2>
             <p>Siempre estoy dispuesto a escuchar nuevas ideas, oportunidades y proyectos para empezar a trabajar. </p>
-            <ButtonOne class="contact__button" />
+            <ButtonContact class="contact__button" />
         </section>
 </template>
 
 <script setup>
-    import ButtonOne from './ButtonOne.vue';
+    import ButtonContact from './ButtonContact.vue';
 </script>
 
 <style scoped>

@@ -1,4 +1,5 @@
 import { createApp } from 'vue';
+import store from './store';
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { faEnvelope } from '@fortawesome/free-regular-svg-icons';
@@ -20,5 +21,6 @@ const app = createApp(App)
     
 
 app.use(router);
+app.use(store);
 
 app.mount('#app');

@@ -14,7 +14,7 @@
 
 <script setup>
     import NavBar from '../components/NavBar.vue';
-    import ButtonContact from '@/components/ButtonOne.vue';
+    import ButtonContact from '@/components/ButtonContact.vue';
     import Bubbles from '@/components/BubblesSection.vue';
     
 </script>
