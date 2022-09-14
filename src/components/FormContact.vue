@@ -1,27 +1,31 @@
 <script >
+    import { mapActions,  } from 'vuex';
+
     export default {
         data(){
             return {
                 username: {
-                    name: 'Armando',
-                    lastname: 'Amezquita',
-                    email: 'a.@gmail.com'
+                    name: '',
+                    lastname: '',
+                    email: '',
+                    description: '',
                 }
             }
+        },
+        methods: {
+            //Asi accedo a la accion del store 
+            ...mapActions(['createUser'])
         }
     }
 </script>
 <template>
-    <form action="" @submit.prevent="nombreAcction(obj)">
+    <form action="" @submit.prevent="createUser(username)">
         <input class="name" type="text" placeholder="name" v-model="username.name">
         <input class="lastname" type="text" placeholder="lastname" v-model="username.lastname">
         <input class="email" type="text" placeholder="email" v-model="username.email">
-        <textarea class="textarea" name="" id="" cols="30" rows="10"> sugerencias</textarea>
+        <textarea class="description" placeholder="¿Alguna sugerencia para nuestra charla?" name="description" v-model="username.description" id="" cols="30" rows="10"> </textarea>
         <button class="send" type="submit">Enviar</button>
     </form>
-    <!-- <p>
-        {{username}}
-    </p> -->
 </template>
 
 <style scoped>
@@ -48,7 +52,8 @@
     .email{
         grid-area: area2;
     }
-    .textarea{
+    textarea{
+        padding: 1rem;
         grid-area: area3;
     }
     button{

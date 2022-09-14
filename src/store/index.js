@@ -31,7 +31,36 @@ const store = createStore({
                 },
             ]
         }
-    }
+    },
+    actions: {
+        async obtenerUsername({ commit }) {
+            const res = await fetch(`http://localhost:4001/api/projects`);
+            const data = await res.json();
+            console.log(data);
+            commit("updateUsername", data);
+        },
+        async createUser({commit}, username){
+            const newUser = await fetch(`http://localhost:4001/api/users`, {
+                method: 'POST',
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify(username)
+            });
+            await newUser.json();
+            
+            const user = ""
+            commit('setState', user);
+        }
+    },
+    mutations: {
+        //los commit sirven para llamar a las mutaciones
+        setState(state, payload){
+            state.username = payload
+        }
+    },
 });
 
+
+//La acction llama a la mutacion y la mutacion modifica el state
 export default store;

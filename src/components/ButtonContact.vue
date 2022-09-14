@@ -1,7 +1,21 @@
+<script setup>
+    // import { computed } from "vue";
+    // import { useStore } from "vuex";
+    // const store = useStore();
+    
+    // const username = computed(() => store.state.username);
+    
+    // const actualizar = (value) => store.commit("updateUsername", value);
+    // const obtenerUser = () => store.dispatch("obtenerUsername");
+</script>
+
 <template>  
     <button @click="$router.push('/contact')">
         Contactame
     </button>
+    <!-- <button @click="obtenerUser">
+        Contactame
+    </button> -->
 </template>
 
 <style scoped>

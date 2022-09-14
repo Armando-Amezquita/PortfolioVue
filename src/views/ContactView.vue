@@ -62,7 +62,6 @@
         background-color: var(--dark-black);
     }
     h2{
-        margin-bottom: 2rem;
         font-size: 2rem;
         width: 60rem;
         text-align: center;
