@@ -31,9 +31,10 @@
   }
   body{
     font-size: 64.5%;
-font-family: 'Fira Sans Condensed', sans-serif;
+    font-family: 'Fira Sans Condensed', sans-serif;
     font-family: 'DynaPuff', cursive;
     background-color: #F7F9FA;
+    overflow-x: hidden;
   }
   #app{
     width: 100%;

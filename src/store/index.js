@@ -4,6 +4,7 @@ const store = createStore({
     state(){
         return {
             username: 'Armando',
+            projectsDb: [],
             projects: [
                 {
                     id: 1,
@@ -32,12 +33,34 @@ const store = createStore({
             ]
         }
     },
+    mutations: {
+        //los commit sirven para llamar a las mutaciones y la mutaciones modifican el estado
+        setState(state, payload){
+            state.projectsDb = payload;
+            console.log(state.projectsDb);
+        }
+    },
     actions: {
         async obtenerUsername({ commit }) {
             const res = await fetch(`http://localhost:4001/api/projects`);
             const data = await res.json();
             console.log(data);
             commit("updateUsername", data);
+        },
+        async getProjects({commit}){
+            try {
+                const projects = await fetch(`http://localhost:4001/api/projects`, {
+                method: 'GET',
+                headers: {
+                    "Content-Type": "application/json",
+                }
+            });
+                const res = await projects.json();
+                commit('setState', res);
+            } catch (error) {
+                console.log('error :>> ', error);
+            }
+            
         },
         async createUser({commit}, username){
             const newUser = await fetch(`http://localhost:4001/api/users`, {
@@ -51,12 +74,6 @@ const store = createStore({
             
             const user = ""
             commit('setState', user);
-        }
-    },
-    mutations: {
-        //los commit sirven para llamar a las mutaciones
-        setState(state, payload){
-            state.username = payload
         }
     },
 });

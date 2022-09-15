@@ -7,7 +7,7 @@
             :title="project.title"
             :id=" project.id"
             :description = project.description
-            :tecnologies = project.tecnologies
+            :technologies = project.technologies
             :image = project.image
         />
     </div>
@@ -21,7 +21,7 @@
         projects : {
             type: Array,
             default: () => [],
-        }
+        },
     });
     const { projects } = toRefs(props);
 

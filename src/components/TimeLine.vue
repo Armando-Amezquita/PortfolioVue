@@ -1,22 +1,3 @@
-<template>
-    <div class="timeline__container"  data-aos="fade-up" >
-            <section class="portfolio">
-                <div class="portfolio__container">
-                    <div class="portfolio__container-information">
-                        <h3>{{ title }}</h3>
-                        <p>{{ description }}</p>
-                        <h3>Tecnologias utilizadas</h3>
-                        <p>{{ tecnologies }}</p>
-                    </div>
-                    <picture class="portfolio__container-image">
-                        <img :src="require(`@/assets/${image}`)" :alt="`${title}`">
-                    </picture>
-                </div>
-                
-            </section>
-            <hr />
-    </div>
-</template>
 <script setup >
     import { toRefs, defineProps } from 'vue';
     import AOS from 'aos';
@@ -26,7 +7,7 @@
 
     const props = defineProps({
         id: {
-            type: Number 
+            type: String 
         },
         title: {
             type: String 
@@ -37,13 +18,33 @@
         image: {
             type: String 
         },
-        tecnologies:{
+        technologies:{
             type: String
-        }
+        },
     });
-    const { title,  description, tecnologies, image } = toRefs(props);
+    const { title,  description, technologies, /* image */  } = toRefs(props);
 
 </script>
+
+<template>
+    <div class="timeline__container"  data-aos="fade-up" >
+            <section class="portfolio">
+                <div class="portfolio__container">
+                    <div class="portfolio__container-information">
+                        <h3>{{ title }}</h3>
+                        <p>{{ description }}</p>
+                        <h3>Tecnologias utilizadas</h3>
+                        <p>{{ technologies }}</p>
+                    </div>
+                    <!-- <picture class="portfolio__container-image">
+                        <img :src="require(`@/assets/${image}`)" :alt="`${title}`">
+                    </picture> -->
+                </div>
+                
+            </section>
+            <hr />
+    </div>
+</template>
 
 <style scoped>
     .portfolio{
