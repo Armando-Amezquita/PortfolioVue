@@ -22,7 +22,7 @@
             type: String
         },
     });
-    const { title,  description, technologies, /* image */  } = toRefs(props);
+    const { title,  description, technologies, /* image   */ } = toRefs(props);
 
 </script>
 
@@ -36,9 +36,10 @@
                         <h3>Tecnologias utilizadas</h3>
                         <p>{{ technologies }}</p>
                     </div>
-                    <!-- <picture class="portfolio__container-image">
-                        <img :src="require(`@/assets/${image}`)" :alt="`${title}`">
-                    </picture> -->
+                    <picture class="portfolio__container-image">
+                        <!-- <img :src="require(`${image}`)" :alt="`${title}`"> -->
+                        <!-- <img :src="`http://localhost:4001/api/projects`" :alt="`${title}`"> -->
+                    </picture>
                 </div>
                 
             </section>

@@ -13,16 +13,16 @@
             }
         },
         methods: {
-            //Asi accedo a la accion del store 
-            ...mapActions(['createUser'])
+            ...mapActions(['createUser']),
+            
         }
     }
 </script>
 <template>
     <form action="" @submit.prevent="createUser(username)">
-        <input class="name" type="text" placeholder="name" v-model="username.name">
-        <input class="lastname" type="text" placeholder="lastname" v-model="username.lastname">
-        <input class="email" type="text" placeholder="email" v-model="username.email">
+        <input class="name" type="text" placeholder="Nombre" v-model="username.name">
+        <input class="lastname" type="text" placeholder="Apellido" v-model="username.lastname">
+        <input class="email" type="text" placeholder="Email" v-model="username.email">
         <textarea class="description" placeholder="¿Alguna sugerencia para nuestra charla?" name="description" v-model="username.description" id="" cols="30" rows="10"> </textarea>
         <button class="send" type="submit">Enviar</button>
     </form>
